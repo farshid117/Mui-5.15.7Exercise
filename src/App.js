@@ -1,20 +1,16 @@
-import { Button, createTheme, ThemeProvider } from "@mui/material";
-import { Person } from "@mui/icons-material";
+import { useRoutes } from "react-router-dom";
+
+import {MainLayout} from "./component"
+import { routes } from "./routes";
 
 function App() {
-  const theme = createTheme(
-    {
-      typography:{
-        fontFamily: "Vazir",
-      }
-    }
-  )
+
+  let router = useRoutes(routes) // routes is Array of objects
+ 
   return (
-   <ThemeProvider theme={theme}>
-      <div>
-        <Button variant="contained" startIcon={<Person sx={{ ml:1, mr:0 }} />} > کلیک کنید </Button>
-      </div>
-   </ThemeProvider>
+    <MainLayout>
+      {router}
+    </MainLayout>
   );
 }
 
