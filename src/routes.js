@@ -2,15 +2,9 @@ import Main from './Main';
 import { AutocompleteTest, ButtonTest } from './component';
 
 export let routes = [
-    {
-        path: '/', element: <Main />
-    },
-    {
-        path: '/input/autocomplete', element: <AutocompleteTest />
-    },
-    {
-        path: '/input/button', element: <ButtonTest />
-    },
+    {path: '/', element: <Main />},
+    {path: '/input/autocomplete', element: <AutocompleteTest />},
+    {path: '/input/button', element: <ButtonTest />},
     /*todo Nested Route */
  /*    {
         path: '/rrd',
