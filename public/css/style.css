@@ -1,16 +1,29 @@
 @font-face {
     font-family: 'Vazir';
     src: url('../fonts/Vazir.eot') format('eot');
-    src : url('../fonts/Vazir.ttf') format('truetype'),
-    url('../fonts/Vazir.woff') format('woff');
+    src: url('../fonts/Vazir.ttf') format('truetype'),
+        url('../fonts/Vazir.woff') format('woff');
 }
 
-*{
+* {
     font-family: 'Vazir';
 }
 
-body{
+body {
     direction: rtl;
     text-align: right;
     font-family: 'Vazir';
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+
+
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 100vh;
+
+}
+
+::-webkit-scrollbar {
+    display: none;
 }

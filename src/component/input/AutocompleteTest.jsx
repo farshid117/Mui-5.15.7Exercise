@@ -11,17 +11,17 @@ Autocomplete went with two scenarious:
 const AutoCompleteTest = () => {
     return (
         <>
-            <Stack gap={3} textAlign="center">
-                <h1>This is AutoCompleteTest component</h1>
+            <Stack gap={3} textAlign="center" sx={{color:"#fff"}}>
+                <h1>This is AutoCompleteTest Component</h1>
                 <Autocomplete
+                    
                     multiple
-                    checkboxes
                     disablePortal
                     freeSolo
                     id="combo-box-demo"
                     options={top100Films.map(film => film.year)}
-                    sx={{ width: 300, margin: "0 auto" }}
-                    renderInput={(params) => <TextField {...params} label="فیلم را انتخاب کنید" />}
+                    sx={{ width: 300, margin: "0 auto", borderColor: "secondary.main", outlineColor: "secondary.main" }}
+                    renderInput={(params) => <TextField {...params} label="فیلم را انتخاب کنید" placeholder='Favoraite'  />}
                 />
 
                 <Box>

@@ -11,7 +11,7 @@ const Main = () => {
             <Helmet>
                 <title>تمرین کاموننت‌های آماده Mui</title>
             </Helmet>
-            <section id="input">
+            <Box id="input" sx={{color:"#fff"}} >
                 <Grid container spacing={2} >
                     <Grid xs={12} md={6} >
                         <h3>کامپوننت‌های Input : </h3>
@@ -28,7 +28,12 @@ const Main = () => {
                             </li>
                             <li>
                                 <Box marginBottom={1}>
-                                    <Button component={Link} to="" variant="contained" color="success"  > Checkbox </Button>
+                                    <Button component={Link} to="/input/textfield" variant="contained" color="success"  > TextField </Button>
+                                </Box>
+                            </li>
+                            <li>
+                                <Box marginBottom={1}>
+                                    <Button component={Link} to="" variant="contained" color="warning"  > Floating Action Button </Button>
                                 </Box>
                             </li>
                             <li>
@@ -86,7 +91,7 @@ const Main = () => {
                         </Box>
                     </Grid>
                 </Grid>
-            </section>
+            </Box>
         </>
     );
 }
