@@ -70,50 +70,46 @@ const TextFieldTest = () => {
 
             <Typography variant="h4" color="initial" sx={{ direction: "rtl", fontWeight: "bold", textAlign: "right" }}>4-3: select</Typography>
             <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-            <Box className="card">
-                <Box className="crad-body">
+                <Box className="card p-4 ">
+                    <Box className="crad-body">
                         <Box
                             component="form"
                             sx={{
-                                '& .MuiTextField-root': { m: 1, width: 300 },
+                                '& .MuiTextField-root': { m: 1, width: 350 },
                             }}
                             noValidate
                             autoComplete="off"
                         >
-                            <div>
-                                <TextField
-                                    select
-                                    label="Select"
-                                    defaultValue="EUR"
-                                    helperText="Please select your currency"
-                                >
-                                    {currencies.map((option) => (
-                                        <MenuItem key={option.value} value={option.value}>
-                                            {option.label}
-                                        </MenuItem>
-                                    ))}
-                                </TextField>
-                                <TextField
-                                    select
-                                    label="Native select"
-                                    defaultValue="EUR"
-                                    SelectProps={{
-                                        native: true,
-                                    }}
-                                    helperText="Please select your currency"
-                                >
-                                    {currencies.map((option) => (
-                                        <option key={option.value} value={option.value}>
-                                            {option.label}
-                                        </option>
-                                    ))}
-                                </TextField>
-                            </div>
-
+                            <TextField
+                                select
+                                label="انتخاب کنید"
+                                defaultValue="EUR"
+                                helperText="لطفا واحد پول خود را انتخاب کنید"
+                            >
+                                {currencies.map((currency) => (
+                                    <MenuItem key={currency.value} value={currency.value}>
+                                        {currency.label}
+                                    </MenuItem>
+                                ))}
+                            </TextField>
+                            <TextField
+                                select
+                                label="Native select"
+                                defaultValue="EUR"
+                                SelectProps={{
+                                    native: true,
+                                }}
+                                helperText="Please select your currency"
+                            >
+                                {currencies.map((currency) => (
+                                    <option key={currency.value} value={currency.value}>
+                                        {currency.label}
+                                    </option>
+                                ))}
+                            </TextField>
                         </Box>
-
+                    </Box>
                 </Box>
-            </Box>
             </Box>
 
 
